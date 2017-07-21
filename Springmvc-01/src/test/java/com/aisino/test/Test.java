@@ -57,4 +57,10 @@ public class Test {
 			 System.out.println(str);
 		 }
 	}
+	@org.junit.Test
+	public void testRequestHeader() throws HttpException, IOException{
+		PostMethod postMethod = new PostMethod("http://localhost:8080/Springmvc-01/helloController/testRequestHeader"); 
+		postMethod.setRequestHeader("userid", "5001");
+		httpClient.executeMethod(postMethod);
+	}
 }

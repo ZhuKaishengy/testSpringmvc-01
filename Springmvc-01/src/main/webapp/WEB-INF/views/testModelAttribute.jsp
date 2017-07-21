@@ -9,7 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>My JSP 'hello.jsp' starting page</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -18,23 +19,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+
   </head>
   
   <body>
-    This is my JSP page. <br>
-    <a href="helloController">testGet<br>
-    <form action="helloController" title="testPost" method="POST">
-    	<input type="text" name="username"/>
+    <form action="helloController/testModelAttribute?id=1" method="post">
+    	<input type="text" name="username" value="zhukaisheng"/>
+    	<input type="password" name="password" value="123456"/>
     	<input type="submit" value="submit"/>
     </form>
-    <form action="helloController/testPutMethod/1" title="testPut" method="POST">
-    	<input type="hidden" name="_method" value="PUT"/>
-    	<input type="submit" value="submit"/>
-    </form>
-    <form action="helloController/testDeleteMethod/2" title="testDelete" method="post" />
-		<input type="hidden" name="_method" value="DELETE"/>
-    	<input type="submit" value="submit"/>
-    </form>
-    <a href="helloController/testRequestParam?username=zks&&password=123">testRequestParam</a>
   </body>
 </html>
