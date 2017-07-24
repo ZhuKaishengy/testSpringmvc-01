@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -181,7 +182,7 @@ public class HelloController {
 		requestMap.put("user", user);
 		return "testSessionAttributes";
 	}
-	
+	@ModelAttribute("user")
 	public void getUser(@RequestParam(value="id",required=false) Integer id,Map<String, Object> map){
 		if(id!=null){
 			User user = new User();
