@@ -13,4 +13,7 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" id="beanNameViewResolver"> 
+		<property name="order" value="0"/>
+	</bean>
 </beans>
